@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210327 14:16:06.362" rpa="false">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Valid Credential Tests" source="C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr\LoginSuite\valid_credential_tests.robot">
+<test id="s1-s1-t1" name="TC1">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 14:16:07.174" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 14:16:07.173" endtime="20210327 14:16:07.174"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:07.174" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 14:16:07.174" endtime="20210327 14:16:08.898"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 14:16:08.898" endtime="20210327 14:16:09.024"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:09.025" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 14:16:09.024" endtime="20210327 14:16:13.317"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:16:13.318" endtime="20210327 14:16:13.327"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:16:13.327" endtime="20210327 14:16:13.337"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:16:07.173" endtime="20210327 14:16:13.338"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>admin</arg>
+<arg>pass</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:13.341" level="INFO">Typing text 'admin' into text field 'xpath=//input[@id='authUser']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210327 14:16:43.730" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../screenshot/selenium-screenshot-5.png"&gt;&lt;img src="../../screenshot/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210327 14:16:43.395" endtime="20210327 14:16:43.730"></status>
+</kw>
+<msg timestamp="20210327 14:16:43.754" level="FAIL">Element with locator 'xpath=//input[@id='authUser']' not found.</msg>
+<status status="FAIL" starttime="20210327 14:16:13.341" endtime="20210327 14:16:43.754"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:13.340" endtime="20210327 14:16:43.754"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:13.338" endtime="20210327 14:16:43.755"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 14:16:43.755" endtime="20210327 14:16:46.398"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:16:43.755" endtime="20210327 14:16:46.399"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:07.172" endtime="20210327 14:16:46.399" critical="yes">Element with locator 'xpath=//input[@id='authUser']' not found.</status>
+</test>
+<test id="s1-s1-t2" name="TC2">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 14:16:46.404" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 14:16:46.403" endtime="20210327 14:16:46.404"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:46.405" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 14:16:46.404" endtime="20210327 14:16:48.016"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 14:16:48.017" endtime="20210327 14:16:48.138"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:48.139" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 14:16:48.138" endtime="20210327 14:16:49.582"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:16:49.582" endtime="20210327 14:16:49.586"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:16:49.586" endtime="20210327 14:16:49.589"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:16:46.402" endtime="20210327 14:16:49.589"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>physician</arg>
+<arg>physician</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:49.591" level="INFO">Typing text 'physician' into text field 'xpath=//input[@id='authUser']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210327 14:16:54.642" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+</msg>
+<status status="FAIL" starttime="20210327 14:16:54.573" endtime="20210327 14:16:54.642"></status>
+</kw>
+<msg timestamp="20210327 14:16:54.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+</msg>
+<msg timestamp="20210327 14:16:54.645" level="FAIL">Element with locator 'xpath=//input[@id='authUser']' not found.</msg>
+<status status="FAIL" starttime="20210327 14:16:49.590" endtime="20210327 14:16:54.645"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:49.590" endtime="20210327 14:16:54.645"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:49.589" endtime="20210327 14:16:54.645"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 14:16:54.646" endtime="20210327 14:16:57.218"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:16:54.646" endtime="20210327 14:16:57.219"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:46.401" endtime="20210327 14:16:57.219" critical="yes">Element with locator 'xpath=//input[@id='authUser']' not found.</status>
+</test>
+<test id="s1-s1-t3" name="TC3">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 14:16:57.222" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 14:16:57.221" endtime="20210327 14:16:57.222"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:57.223" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 14:16:57.222" endtime="20210327 14:16:58.835"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 14:16:58.835" endtime="20210327 14:16:58.960"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 14:16:58.961" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 14:16:58.960" endtime="20210327 14:17:00.413"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:17:00.413" endtime="20210327 14:17:00.416"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 14:17:00.417" endtime="20210327 14:17:00.419"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:16:57.221" endtime="20210327 14:17:00.419"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>accountant</arg>
+<arg>accountant</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 14:17:00.423" level="INFO">Typing text 'accountant' into text field 'xpath=//input[@id='authUser']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210327 14:17:19.642" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=89.0.4389.90)
+</msg>
+<status status="FAIL" starttime="20210327 14:17:07.597" endtime="20210327 14:17:19.642"></status>
+</kw>
+<msg timestamp="20210327 14:17:19.643" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=89.0.4389.90)
+</msg>
+<msg timestamp="20210327 14:17:19.650" level="FAIL">Element with locator 'xpath=//input[@id='authUser']' not found.</msg>
+<status status="FAIL" starttime="20210327 14:17:00.422" endtime="20210327 14:17:19.650"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:17:00.421" endtime="20210327 14:17:19.651"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:17:00.420" endtime="20210327 14:17:19.651"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 14:17:19.651" endtime="20210327 14:17:21.852"></status>
+</kw>
+<status status="PASS" starttime="20210327 14:17:19.651" endtime="20210327 14:17:21.852"></status>
+</kw>
+<status status="FAIL" starttime="20210327 14:16:57.220" endtime="20210327 14:17:21.853" critical="yes">Element with locator 'xpath=//input[@id='authUser']' not found.</status>
+</test>
+<doc>This file validates the positive credentials
+on the open emr demo application</doc>
+<status status="FAIL" starttime="20210327 14:16:06.404" endtime="20210327 14:17:21.854"></status>
+</suite>
+<status status="FAIL" starttime="20210327 14:16:06.365" endtime="20210327 14:17:21.856"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="3" id="s1-s1" name="Valid Credential Tests">Suites.Valid Credential Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210327 14:16:54.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+</msg>
+<msg timestamp="20210327 14:17:19.643" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=89.0.4389.90)
+</msg>
+</errors>
+</robot>

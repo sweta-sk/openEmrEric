@@ -1,0 +1,34 @@
+1616864587836	geckodriver	INFO	Listening on 127.0.0.1:56170
+1616864590859	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\eswakui\\AppData\\Local\\Temp\\rust_mozprofileaWBIe1"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616864593706	Marionette	INFO	Listening on port 56188
+1616864594036	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:11601:17
+sendMessageToTab/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:11601:17
+sendMessageToTab/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:11601:17
+sendMessageToTab/<@moz-extension://271c0485-dfae-4b81-867e-b42ab7ad7025/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1616865254215	Marionette	INFO	Stopped listening on port 56188
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

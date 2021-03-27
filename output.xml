@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210327 22:38:55.155" rpa="false">
+<suite id="s1" name="Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests">
+<suite id="s1-s1" name="Invalid Credential Tests" source="C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr\LoginSuite\invalid_credential_tests.robot">
+<test id="s1-s1-t1" name="TC1">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:38:57.203" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:38:57.203" endtime="20210327 22:38:57.203"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:38:57.204" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:38:57.204" endtime="20210327 22:38:58.442"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:38:58.443" endtime="20210327 22:38:58.566"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:38:58.567" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:38:58.567" endtime="20210327 22:39:07.309"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:07.309" endtime="20210327 22:39:07.314"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:07.314" endtime="20210327 22:39:07.317"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:38:57.203" endtime="20210327 22:39:07.317"></status>
+</kw>
+<kw name="Invalid_Credential_Template">
+<arguments>
+<arg>admin12</arg>
+<arg>pass</arg>
+<arg>English (Indian)</arg>
+<arg>Invalid username or password</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:07.319" level="INFO">Typing text 'admin12' into text field 'xpath=//input[@id='authUser']'.</msg>
+<status status="PASS" starttime="20210327 22:39:07.319" endtime="20210327 22:39:07.419"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:07.318" endtime="20210327 22:39:07.420"></status>
+</kw>
+<kw name="Enter_Password" library="LoginPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:07.420" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210327 22:39:07.487" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210327 22:39:07.537" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210327 22:39:07.420" endtime="20210327 22:39:07.538"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:07.420" endtime="20210327 22:39:07.539"></status>
+</kw>
+<kw name="Select_Language_Using_Label" library="LoginPage">
+<arguments>
+<arg>${language}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${LANGUAGE_LOCATOR}</arg>
+<arg>${language}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:07.541" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20210327 22:39:07.541" endtime="20210327 22:39:07.673"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:07.540" endtime="20210327 22:39:07.674"></status>
+</kw>
+<kw name="Click_Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:07.676" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210327 22:39:07.675" endtime="20210327 22:39:09.008"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:07.674" endtime="20210327 22:39:09.009"></status>
+</kw>
+<kw name="Validate_Error_Message" library="LoginPage">
+<arguments>
+<arg>${expectedvalue}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${ERROR_LOCATOR}</arg>
+<arg>${expectedvalue}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:09.057" level="INFO">Element '//*[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20210327 22:39:09.013" endtime="20210327 22:39:09.057"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:09.009" endtime="20210327 22:39:09.057"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:07.318" endtime="20210327 22:39:09.057"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:38:57.202" endtime="20210327 22:39:09.057" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TC1">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:39:09.063" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:39:09.062" endtime="20210327 22:39:09.063"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:09.064" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:39:09.063" endtime="20210327 22:39:10.779"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:39:10.780" endtime="20210327 22:39:10.899"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:10.900" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:39:10.900" endtime="20210327 22:39:21.695"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:21.695" endtime="20210327 22:39:21.702"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:21.702" endtime="20210327 22:39:21.708"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:09.061" endtime="20210327 22:39:21.708"></status>
+</kw>
+<kw name="Invalid_Credential_Template">
+<arguments>
+<arg>physician12</arg>
+<arg>physician</arg>
+<arg>Dutch</arg>
+<arg>Invalid username or password</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:21.710" level="INFO">Typing text 'physician12' into text field 'xpath=//input[@id='authUser']'.</msg>
+<status status="PASS" starttime="20210327 22:39:21.709" endtime="20210327 22:39:21.824"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:21.709" endtime="20210327 22:39:21.824"></status>
+</kw>
+<kw name="Enter_Password" library="LoginPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:21.825" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210327 22:39:21.874" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210327 22:39:21.927" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210327 22:39:21.825" endtime="20210327 22:39:21.927"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:21.824" endtime="20210327 22:39:21.928"></status>
+</kw>
+<kw name="Select_Language_Using_Label" library="LoginPage">
+<arguments>
+<arg>${language}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${LANGUAGE_LOCATOR}</arg>
+<arg>${language}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:21.929" level="INFO">Selecting options from selection list 'name=languageChoice' by label Dutch.</msg>
+<status status="PASS" starttime="20210327 22:39:21.929" endtime="20210327 22:39:22.021"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:21.928" endtime="20210327 22:39:22.022"></status>
+</kw>
+<kw name="Click_Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:22.022" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210327 22:39:22.022" endtime="20210327 22:39:23.367"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:22.022" endtime="20210327 22:39:23.367"></status>
+</kw>
+<kw name="Validate_Error_Message" library="LoginPage">
+<arguments>
+<arg>${expectedvalue}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${ERROR_LOCATOR}</arg>
+<arg>${expectedvalue}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:23.443" level="INFO">Element '//*[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20210327 22:39:23.368" endtime="20210327 22:39:23.444"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:23.367" endtime="20210327 22:39:23.445"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:21.709" endtime="20210327 22:39:23.446"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:09.061" endtime="20210327 22:39:23.447" critical="yes"></status>
+</test>
+<doc>This file test the invalid credentail error details</doc>
+<status status="PASS" starttime="20210327 22:38:55.200" endtime="20210327 22:39:23.452"></status>
+</suite>
+<suite id="s1-s2" name="Valid Credential Tests" source="C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr\LoginSuite\valid_credential_tests.robot">
+<test id="s1-s2-t1" name="TC1">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:39:23.568" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:39:23.567" endtime="20210327 22:39:23.569"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:23.571" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:39:23.570" endtime="20210327 22:39:25.289"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:39:25.289" endtime="20210327 22:39:25.411"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:25.412" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:39:25.412" endtime="20210327 22:39:33.249"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:33.250" endtime="20210327 22:39:33.258"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:33.258" endtime="20210327 22:39:33.265"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:23.566" endtime="20210327 22:39:33.265"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>admin</arg>
+<arg>pass</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:33.267" level="INFO">Typing text 'admin' into text field 'xpath=//input[@id='authUser']'.</msg>
+<status status="PASS" starttime="20210327 22:39:33.267" endtime="20210327 22:39:33.394"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:33.266" endtime="20210327 22:39:33.395"></status>
+</kw>
+<kw name="Enter_Password" library="LoginPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:33.396" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210327 22:39:33.441" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210327 22:39:33.519" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210327 22:39:33.395" endtime="20210327 22:39:33.519"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:33.395" endtime="20210327 22:39:33.520"></status>
+</kw>
+<kw name="Select_Language_Using_Label" library="LoginPage">
+<arguments>
+<arg>${language}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${LANGUAGE_LOCATOR}</arg>
+<arg>${language}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:33.522" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20210327 22:39:33.522" endtime="20210327 22:39:33.653"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:33.520" endtime="20210327 22:39:33.654"></status>
+</kw>
+<kw name="Click_Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:33.656" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210327 22:39:33.655" endtime="20210327 22:39:40.301"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:33.654" endtime="20210327 22:39:40.301"></status>
+</kw>
+<kw name="Dashboard_Page_Should_Contain" library="DashboardPage">
+<arguments>
+<arg>${expectedvalue}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:40.303" endtime="20210327 22:39:40.328"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${expectedtext}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:40.345" level="INFO">Current page contains text 'Flow Board'.</msg>
+<status status="PASS" starttime="20210327 22:39:40.328" endtime="20210327 22:39:40.345"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:40.302" endtime="20210327 22:39:40.345"></status>
+</kw>
+<kw name="Mouse_Over_Profile_Name" library="DashboardPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:40.346" level="INFO">Simulating Mouse Over on element 'xpath=//span[@data-bind='text:fname']'.</msg>
+<status status="PASS" starttime="20210327 22:39:40.345" endtime="20210327 22:39:40.614"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:40.345" endtime="20210327 22:39:40.614"></status>
+</kw>
+<kw name="Click_LogOut" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:40.616" level="INFO">Clicking element 'xpath=//li[text()='Logout']'.</msg>
+<status status="PASS" starttime="20210327 22:39:40.615" endtime="20210327 22:39:40.690"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:40.615" endtime="20210327 22:39:40.690"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:33.266" endtime="20210327 22:39:40.690"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 22:39:40.691" endtime="20210327 22:39:43.389"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:40.691" endtime="20210327 22:39:43.389"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:23.557" endtime="20210327 22:39:43.390" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="TC2">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:39:43.393" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:39:43.393" endtime="20210327 22:39:43.394"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:43.394" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:39:43.394" endtime="20210327 22:39:44.996"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:39:44.997" endtime="20210327 22:39:45.125"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:45.126" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:39:45.125" endtime="20210327 22:39:59.397"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:59.397" endtime="20210327 22:39:59.405"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:39:59.405" endtime="20210327 22:39:59.414"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:43.393" endtime="20210327 22:39:59.414"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>physician</arg>
+<arg>physician</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:59.418" level="INFO">Typing text 'physician' into text field 'xpath=//input[@id='authUser']'.</msg>
+<status status="PASS" starttime="20210327 22:39:59.417" endtime="20210327 22:39:59.505"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:59.416" endtime="20210327 22:39:59.505"></status>
+</kw>
+<kw name="Enter_Password" library="LoginPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:59.506" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210327 22:39:59.545" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210327 22:39:59.600" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210327 22:39:59.506" endtime="20210327 22:39:59.600"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:59.505" endtime="20210327 22:39:59.600"></status>
+</kw>
+<kw name="Select_Language_Using_Label" library="LoginPage">
+<arguments>
+<arg>${language}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${LANGUAGE_LOCATOR}</arg>
+<arg>${language}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:59.602" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20210327 22:39:59.601" endtime="20210327 22:39:59.716"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:59.600" endtime="20210327 22:39:59.716"></status>
+</kw>
+<kw name="Click_Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:39:59.718" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210327 22:39:59.717" endtime="20210327 22:40:06.228"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:59.716" endtime="20210327 22:40:06.229"></status>
+</kw>
+<kw name="Dashboard_Page_Should_Contain" library="DashboardPage">
+<arguments>
+<arg>${expectedvalue}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:06.229" endtime="20210327 22:40:06.263"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${expectedtext}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:06.295" level="INFO">Current page contains text 'Flow Board'.</msg>
+<status status="PASS" starttime="20210327 22:40:06.264" endtime="20210327 22:40:06.295"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:06.229" endtime="20210327 22:40:06.295"></status>
+</kw>
+<kw name="Mouse_Over_Profile_Name" library="DashboardPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:06.296" level="INFO">Simulating Mouse Over on element 'xpath=//span[@data-bind='text:fname']'.</msg>
+<status status="PASS" starttime="20210327 22:40:06.296" endtime="20210327 22:40:06.565"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:06.295" endtime="20210327 22:40:06.566"></status>
+</kw>
+<kw name="Click_LogOut" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:06.566" level="INFO">Clicking element 'xpath=//li[text()='Logout']'.</msg>
+<status status="PASS" starttime="20210327 22:40:06.566" endtime="20210327 22:40:06.617"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:06.566" endtime="20210327 22:40:06.617"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:59.415" endtime="20210327 22:40:06.617"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 22:40:06.619" endtime="20210327 22:40:09.232"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:06.618" endtime="20210327 22:40:09.232"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:39:43.392" endtime="20210327 22:40:09.233" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="TC3">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:40:09.236" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:40:09.236" endtime="20210327 22:40:09.236"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:09.237" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:40:09.237" endtime="20210327 22:40:10.937"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:40:10.937" endtime="20210327 22:40:11.063"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:11.064" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:40:11.063" endtime="20210327 22:40:18.454"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:18.455" endtime="20210327 22:40:18.462"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:18.462" endtime="20210327 22:40:18.473"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:09.236" endtime="20210327 22:40:18.473"></status>
+</kw>
+<kw name="Valid_Credential_Template">
+<arguments>
+<arg>accountant</arg>
+<arg>accountant</arg>
+<arg>English (Indian)</arg>
+<arg>Flow Board</arg>
+</arguments>
+<kw name="Enter_Username" library="LoginPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:18.474" level="INFO">Typing text 'accountant' into text field 'xpath=//input[@id='authUser']'.</msg>
+<status status="PASS" starttime="20210327 22:40:18.474" endtime="20210327 22:40:18.581"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:18.474" endtime="20210327 22:40:18.581"></status>
+</kw>
+<kw name="Enter_Password" library="LoginPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:18.581" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210327 22:40:18.652" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210327 22:40:18.754" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210327 22:40:18.581" endtime="20210327 22:40:18.754"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:18.581" endtime="20210327 22:40:18.755"></status>
+</kw>
+<kw name="Select_Language_Using_Label" library="LoginPage">
+<arguments>
+<arg>${language}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${LANGUAGE_LOCATOR}</arg>
+<arg>${language}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:18.758" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20210327 22:40:18.757" endtime="20210327 22:40:18.893"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:18.755" endtime="20210327 22:40:18.893"></status>
+</kw>
+<kw name="Click_Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:18.894" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210327 22:40:18.893" endtime="20210327 22:40:24.334"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:18.893" endtime="20210327 22:40:24.334"></status>
+</kw>
+<kw name="Dashboard_Page_Should_Contain" library="DashboardPage">
+<arguments>
+<arg>${expectedvalue}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:24.334" endtime="20210327 22:40:24.349"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${expectedtext}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:24.369" level="INFO">Current page contains text 'Flow Board'.</msg>
+<status status="PASS" starttime="20210327 22:40:24.349" endtime="20210327 22:40:24.369"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:24.334" endtime="20210327 22:40:24.369"></status>
+</kw>
+<kw name="Mouse_Over_Profile_Name" library="DashboardPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PROFILENAME_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:24.370" level="INFO">Simulating Mouse Over on element 'xpath=//span[@data-bind='text:fname']'.</msg>
+<status status="PASS" starttime="20210327 22:40:24.370" endtime="20210327 22:40:24.644"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:24.369" endtime="20210327 22:40:24.645"></status>
+</kw>
+<kw name="Click_LogOut" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:24.647" level="INFO">Clicking element 'xpath=//li[text()='Logout']'.</msg>
+<status status="PASS" starttime="20210327 22:40:24.646" endtime="20210327 22:40:24.710"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:24.645" endtime="20210327 22:40:24.710"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:18.473" endtime="20210327 22:40:24.710"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 22:40:24.711" endtime="20210327 22:40:27.341"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:24.711" endtime="20210327 22:40:27.342"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:09.235" endtime="20210327 22:40:27.343" critical="yes"></status>
+</test>
+<doc>This file validates the positive credentials
+on the open emr demo application</doc>
+<status status="PASS" starttime="20210327 22:39:23.490" endtime="20210327 22:40:27.349"></status>
+</suite>
+<suite id="s1-s3" name="Verify Add Patient Tests" source="C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr\PatientSuite\verify_add_patient_tests.robot">
+<test id="s1-s3-t1" name="Verify_add_patient">
+<kw name="Launch_Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>${EXECDIR}/driver</arg>
+</arguments>
+<msg timestamp="20210327 22:40:27.405" level="INFO">Environment variable 'PATH' set to value 'C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x32;C:\Program Files (x86)\Adaptiva\AdaptivaClient\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\eswakui\AppData\Local\Programs\Python\Python39;C:\Users\eswakui\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Git\cmd;C:\Ruby26-x64\bin;C:\Users\eswakui\AppData\Local\Microsoft\WindowsApps;;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver;C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr/driver'.</msg>
+<status status="PASS" starttime="20210327 22:40:27.405" endtime="20210327 22:40:27.405"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:27.406" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210327 22:40:27.405" endtime="20210327 22:40:28.952"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210327 22:40:28.952" endtime="20210327 22:40:29.083"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20210327 22:40:29.084" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<status status="PASS" starttime="20210327 22:40:29.084" endtime="20210327 22:40:37.949"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:37.949" endtime="20210327 22:40:37.957"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210327 22:40:37.957" endtime="20210327 22:40:37.965"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:27.404" endtime="20210327 22:40:37.965"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=authUser</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20210327 22:40:37.966" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20210327 22:40:37.966" endtime="20210327 22:40:38.056"></status>
+</kw>
+<kw name="Input Password id=clearPass">
+<arguments>
+<arg>pass</arg>
+</arguments>
+<msg timestamp="20210327 22:40:38.060" level="FAIL">No keyword with name 'Input Password id=clearPass' found.</msg>
+<status status="FAIL" starttime="20210327 22:40:38.060" endtime="20210327 22:40:38.060"></status>
+</kw>
+<kw name="End_Browser" library="common_functionality" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210327 22:40:38.061" endtime="20210327 22:40:40.683"></status>
+</kw>
+<status status="PASS" starttime="20210327 22:40:38.061" endtime="20210327 22:40:40.684"></status>
+</kw>
+<status status="FAIL" starttime="20210327 22:40:27.403" endtime="20210327 22:40:40.684" critical="yes">No keyword with name 'Input Password id=clearPass' found.</status>
+</test>
+<status status="FAIL" starttime="20210327 22:40:27.376" endtime="20210327 22:40:40.689"></status>
+</suite>
+<status status="FAIL" starttime="20210327 22:38:55.160" endtime="20210327 22:40:40.700"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1">Critical Tests</stat>
+<stat pass="5" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" id="s1" name="Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests">Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Invalid Credential Tests">Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests.Invalid Credential Tests</stat>
+<stat pass="3" fail="0" id="s1-s2" name="Valid Credential Tests">Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests.Valid Credential Tests</stat>
+<stat pass="0" fail="1" id="s1-s3" name="Verify Add Patient Tests">Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests.Verify Add Patient Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210327 22:39:09.059" level="WARN">Multiple test cases with name 'TC1' executed in test suite 'Invalid Credential Tests &amp; Valid Credential Tests &amp; Verify Add Patient Tests.Invalid Credential Tests'.</msg>
+</errors>
+</robot>

@@ -1,0 +1,6 @@
+datasources:d5e6a02448c35c0f413a5ab6e7be334ca36ac27c
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:a8ab99d841f72cbe955e6dc2b3e34f09fb073ee9
+--suite Suites.Invalid Credential Tests
+--suite Suites.Valid Credential Tests

@@ -1,0 +1,23 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Valid Credential Tests :: This file validates the positive credentia...
+==============================================================================
+TC1                                                                   | FAIL |
+Element with locator 'xpath=//input[@id='authUser']' not found.
+------------------------------------------------------------------------------
+TC2                                                                   | FAIL |
+Element with locator 'xpath=//input[@id='authUser']' not found.
+------------------------------------------------------------------------------
+TC3                                                                   | FAIL |
+Element with locator 'xpath=//input[@id='authUser']' not found.
+------------------------------------------------------------------------------
+Suites.Valid Credential Tests :: This file validates the positive ... | FAIL |
+3 critical tests, 0 passed, 3 failed
+3 tests total, 0 passed, 3 failed
+==============================================================================
+Suites                                                                | FAIL |
+3 critical tests, 0 passed, 3 failed
+3 tests total, 0 passed, 3 failed
+==============================================================================
+Output:  C:\Users\eswakui\Desktop\robot\robotworkspace\OpenEmr\OpenEmr\pabot_results\1\output.xml

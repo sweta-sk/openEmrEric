@@ -1,0 +1,42 @@
+1616733439258	geckodriver	INFO	Listening on 127.0.0.1:60102
+1616733442265	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\eswakui\\AppData\\Local\\Temp\\rust_mozprofileKTNItN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616733445206	Marionette	INFO	Listening on port 60119
+1616733445435	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:11601:17
+sendMessageToTab/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:11601:17
+sendMessageToTab/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:11601:17
+sendMessageToTab/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: TypeError: documentTitleResponse is undefined moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js 11601
+[[Exception stack
+this.AternityExtension.background</TabsMonitoring.prototype.scheduleUpdateDocumentTitleInFrames/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:11601:17
+sendMessageToTab/<@moz-extension://c3108d45-ed19-4bac-b92c-50288e1d6902/background.js:3777:24
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1616734192610	Marionette	INFO	Stopped listening on port 60119
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
